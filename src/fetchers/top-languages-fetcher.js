@@ -8,7 +8,6 @@ const fetcher = (variables, token) => {
       query: `
       query userInfo($login: String!) {
         repos: search(query: $login, type: REPOSITORY, first: 100) {
-        #repositories(ownerAffiliations: OWNER, isFork: false, archived: false, first: 100) {
           nodes {
             ... on Repository {
               name
