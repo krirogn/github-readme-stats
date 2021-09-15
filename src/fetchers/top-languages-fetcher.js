@@ -43,7 +43,7 @@ async function fetchTopLanguages(username, exclude_repo = []) {
     throw Error(res.data.errors[0].message || "Could not fetch user");
   }
 
-  let repoNodes = res.data.data.user.repositories.nodes;
+  let repoNodes = res.data.data.repos.nodes;
   let repoToHide = {};
 
   // populate repoToHide map for quick lookup
